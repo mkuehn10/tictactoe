@@ -1,0 +1,125 @@
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+/**, *:before, *:after {
+  box-sizing: inherit;
+}*/
+
+/* Space out content a bit */
+body {
+  padding: 5px;
+  background-color: steelblue;
+}
+
+
+.container {
+  max-width: 1000px;
+  /*max-height: 900px;*/
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.col-1, .col-2, .col-3 {
+  /*background-color: wheat;*/
+  /*height: 105px;*/
+  padding: 0;
+}
+
+/** {
+  border: 1px solid red;
+}*/
+
+.icon {
+  font-size: 215px;
+  display: block;
+}
+
+/*@media (orientation: landscape) {
+  .container {
+    max-width: 320px;
+  }
+}*/
+
+/** {
+  border: 1px solid red;
+}*/
+
+.play-area {
+  border: 2px solid white;
+  /*padding: 10px;*/
+}
+.s0-0 {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.s0-1 {
+  border-bottom: 2px solid black;
+}
+
+.s0-2 {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.s1-0 {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.s1-1 {
+  border-bottom: 2px solid black;
+}
+
+.s1-2 {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.s2-0 {
+  border-right: 2px solid black;
+}
+
+.s2-2 {
+  border-left: 2px solid black;
+}
+
+.center-block {
+  /*float: none;*/
+}
+
+/*@media (min-width: 992px) {
+  .row.text-center > div {
+    display: inline-block;
+    float: none;
+}
+
+}*/
+/* http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-centered-columns*/
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    margin-bottom: -5px;
+}
+/*
+.img-responsive {
+  display: block;
+  width: auto;
+  max-height: 100%;
+}*/
+
+
