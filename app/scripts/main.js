@@ -51,7 +51,7 @@ $(function() {
             gameWon();
         }
         if (numTurn == 9) {
-            console.log("Tied!")
+            console.log('Tied!')
             endGame();
         }
     }
@@ -84,7 +84,7 @@ $(function() {
     }
 
     function endGame() {
-        console.log("Game over!");
+        console.log('Game over!');
     }
 
 });
