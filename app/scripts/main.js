@@ -1,11 +1,13 @@
 $(function() {
 
-  var currentTurn = 'O';
+  var currentTurn = 'X';
   var numTurn = 0;
-  var imageToUse = '';
+  var imageToUse = 'images/x.png';
   var boardState = [['a','b','c'],
-                    ['d','e','f'],
-                    ['g','h','i']]
+  ['d','e','f'],
+  ['g','h','i']]
+
+  // toggleTurn(currentTurn);
 
   $('.play-area').click(function(e) {
     processTurn(e);
@@ -65,7 +67,7 @@ $(function() {
       currentTurn = 'X';
     };
   }
-  toggleTurn(currentTurn);
+
 
   function gameWon() {
     $('.play-area').off('click');
@@ -76,6 +78,7 @@ $(function() {
     console.log('Game over!');
     $('.status').css('color', 'crimson');
     $('.status').text('Game over!');
+    $('.play-again').show();
   }
 
 });
