@@ -9,6 +9,7 @@ $(function() {
         'o_img': O_IMAGE
     };
 
+    var lastPlayed;
     var BLANK_IMAGE = 'images/blank.png';
     var currentTurn;
     var numTurn;
@@ -46,9 +47,9 @@ $(function() {
 
     function resetBoardState() {
         boardState = [
-            ['a', 'b', 'c'],
-            ['d', 'e', 'f'],
-            ['g', 'h', 'i']
+        ['a', 'b', 'c'],
+        ['d', 'e', 'f'],
+        ['g', 'h', 'i']
         ];
     }
 
@@ -103,7 +104,7 @@ $(function() {
         if (winner == 'T') {
             $('.status').text('TIE!');
         } else {
-            $('.status').text(currentTurn + ' WON');
+            $('.status').text(winner + ' WON');
         }
         setPlayAreaInactive();
         setPlayAgainButtonActive();
@@ -113,23 +114,20 @@ $(function() {
         var winner = 'T';
         for (var row = 0; row < 3; row++) {
             if (boardState[row][0] == boardState[row][1] && boardState[row][1] == boardState[row][2]) {
-                toggleTurn();
-                winner = currentTurn;
+                winner = boardState[row][0];
             }
         }
+
         for (var col = 0; col < 3; col++) {
             if (boardState[0][col] == boardState[1][col] && boardState[1][col] == boardState[2][col]) {
-                toggleTurn();
-                winner = currentTurn;
+                winner = boardState[0][col];
             }
         }
+
         if (boardState[0][0] == boardState[1][1] && boardState[1][1] == boardState[2][2]) {
-            toggleTurn();
-            winner = currentTurn;
-        }
-        if (boardState[2][0] == boardState[1][1] && boardState[1][1] == boardState[0][2]) {
-            toggleTurn();
-            winner = currentTurn;
+            winner = boardState[0][0];
+        } else if (boardState[2][0] == boardState[1][1] && boardState[1][1] == boardState[0][2]) {
+            winner = boardState[2][0];
         }
 
         if (numTurn == 9 && winner == 'T') {
@@ -137,8 +135,6 @@ $(function() {
         } else if (winner != 'T' && numTurn != 9) {
             gameOver(winner);
         } else if (numTurn == 9) {
-            toggleTurn();
-            winner = currentTurn;
             gameOver(winner);
         }
     }
@@ -151,9 +147,9 @@ $(function() {
 
     function toggleTurn() {
         if (currentTurn === 'X') {
-            setTurnTo('o');
-        } else if (currentTurn === 'O') {
-            setTurnTo('x');
-        }
-    }
+         setTurnTo('o');
+     } else if (currentTurn === 'O') {
+         setTurnTo('x');
+     }
+ }
 });
