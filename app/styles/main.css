@@ -1,57 +1,55 @@
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 body {
-  padding: 5px;
-  background-color: black;
+    padding: 5px;
+    background-color: black;
 }
 .container {
-  max-width: 1000px;
+    max-width: 1000px;
 }
-.col-1, .col-2, .col-3 {
-  padding: 0;
+.col-1,
+.col-2,
+.col-3 {
+    padding: 0;
 }
 .icon {
-  font-size: 215px;
-  display: block;
+    font-size: 215px;
+    display: block;
 }
 .play-area {
-  padding: 3px;
+    padding: 3px;
 }
 /* http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-centered-columns*/
 .col-centered {
-    display:inline-block;
-    float:none;
-    text-align:left;
-    margin-right:-3px;
+    display: inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -3px;
     margin-bottom: -3px;
 }
-
-.s1-1 {
-  position: relative;
-}
-
 .play-again {
-  position: absolute;
-  font-size: 12px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  display: none;
+    font-size: 12px;
+    max-width: 100%;
+    display: none;
 }
-
+.status {
+    display: inline;
+    font-size: 12px;
+    max-width: 100%;
+}
 @media (min-width: 500px) {
-  .play-again {
-    font-size: 24px;
-  }
+    .play-again,
+    .status {
+        font-size: 24px;
+    }
 }
-
 @media (min-width: 800px) {
-  .play-again {
-    font-size: 36px;
-  }
+    .play-again,
+    .status {
+        font-size: 36px;
+    }
 }
