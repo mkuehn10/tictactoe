@@ -28,7 +28,7 @@ body {
     display: inline-block;
     float: none;
     text-align: left;
-    margin-right: -3px;
+    margin-right: 0px;
     margin-bottom: -3px;
 }
 .play-again {
