@@ -2,5 +2,6 @@
   "generator-mocha": {
     "ui": "tdd",
     "rjs": false
-  }
+  },
+  "generator-jasmine": {}
 }

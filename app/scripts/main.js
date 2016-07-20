@@ -16,6 +16,7 @@ $(function() {
     var imageToUse;
     var boardState;
 
+
     newGame();
 
     function setPlayAgainButtonActive() {
@@ -152,4 +153,4 @@ $(function() {
          setTurnTo('x');
      }
  }
-});
+ });

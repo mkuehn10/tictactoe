@@ -1,4 +1,4 @@
-// generated on 2016-07-17 using generator-webapp 2.1.0
+// generated on 2016-07-20 using generator-webapp 2.1.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
@@ -45,7 +45,7 @@ gulp.task('lint:test', () => {
   return lint('test/spec/**/*.js', {
     fix: true,
     env: {
-      mocha: true
+      jasmine: true
     }
   })
     .pipe(gulp.dest('test/spec/**/*.js'));
@@ -133,7 +133,8 @@ gulp.task('serve:test', ['scripts'], () => {
       baseDir: 'test',
       routes: {
         '/scripts': '.tmp/scripts',
-        '/bower_components': 'bower_components'
+        '/bower_components': 'bower_components',
+        '/app' : 'app'
       }
     }
   });
