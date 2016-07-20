@@ -1,5 +1,4 @@
-$(function() {
-
+// $(function() {
     var X_IMAGE = 'images/x.png';
     var O_IMAGE = 'images/o.png';
     var playerState = {
@@ -17,7 +16,7 @@ $(function() {
     var boardState;
 
 
-    newGame();
+
 
     function setPlayAgainButtonActive() {
         $('.play-again').off('click').on('click', newGame);
@@ -91,6 +90,8 @@ $(function() {
     }
 
     function processTurn(e) {
+        // $(e.target).parent().attr('disabled', true);
+        console.log('Event triggered')
         setSquare(e);
         var selected = getSquare(e);
         updateBoardState(selected);
@@ -99,6 +100,7 @@ $(function() {
         updateCurrentTurn();
         checkBoard();
         disableSquare(selected);
+
     }
 
     function gameOver(winner) {
@@ -152,5 +154,11 @@ $(function() {
      } else if (currentTurn === 'O') {
          setTurnTo('x');
      }
- }
- });
+    }
+
+    $('.tester').click(function() {
+        $('.jasmine_html-reporter').toggle();
+    });
+
+ // });
+
